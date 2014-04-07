@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.zooz.phonegap.plugin"
+        version="0.0.1">
+    <name>Zooz</name>
+    <description>Zooz Payment Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,zooz,payment</keywords>
+
+    <js-module src="www/zooz_phonegap.js" name="zooz">
+        <clobbers target="zooz" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ZooZCheckoutPlugin" >
+                <param name="android-package" value="com.zooz.phonegap.plugin.ZooZCheckoutPlugin"/>
+            </feature>
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.zooz.android.lib.CheckoutActivity" android:theme="@android:style/Theme.Translucent" android:configChanges="keyboardHidden|orientation|screenSize"/>
+            <activity android:name="com.paypal.android.MEP.PayPalActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        </config-file>
+
+        <source-file src="src/android/ZooZCheckoutPlugin.java" target-dir="src/com/zooz/phonegap/plugin" />
+        <source-file src="src/android/zooz_iap_1.5.0.jar" target-dir="libs/" />
+        
+    </platform>
+    
+    <!-- ios -->
+    <!--
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Device">
+                <param name="ios-package" value="CDVDevice"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CDVDevice.h" />
+        <source-file src="src/ios/CDVDevice.m" />
+    </platform>
+    -->
+</plugin>
