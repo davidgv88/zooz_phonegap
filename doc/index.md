@@ -19,20 +19,39 @@
 
 # com.zooz.phonegap.plugin
 
-Coming soon! Sorry
+This plugin allows you to use ZooZ Payment Gateway with Phonegap V 3.X
 
-<!--
-This plugin defines a global `device` object, which describes the device's hardware and software.
-Although the object is in the global scope, it is not available until after the `deviceready` event.
-
-    document.addEventListener("deviceready", onDeviceReady, false);
-    function onDeviceReady() {
-        console.log(device.cordova);
-    }
+This plugin it is not available until after the `deviceready` event.
 
 ## Installation
 
-    cordova plugin add com.zooz.phonegap.plugin
+1. Download the last Android SDK from zooz website
+
+2. Copy the zooz_iap_1.5.2.jar to yourproject/plugins/com.zooz.phonegap.plugin/src/android. If the file name has another name modify the plugin.xml with the new file name.
+
+3. Add plugin at your project.
+
+this plugin can be installed using the Phonegap CLI:
+
+```sh
+phonegap local plugin add https://github.com/davidgv88/zooz_phonegap_plugin.git
+
+```
+
+or the Cordova CLI:
+
+```sh
+cordova plugin add https://github.com/davidgv88/zooz_phonegap_plugin.git
+
+```
+
+### Quick Example
+
+Coming Soon!
+
+
+<!--
+
 
 ## Properties
 
