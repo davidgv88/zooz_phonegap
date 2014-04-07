@@ -19,6 +19,9 @@
 
 # com.zooz.phonegap.plugin
 
+Coming soon! Sorry
+
+<!--
 This plugin defines a global `device` object, which describes the device's hardware and software.
 Although the object is in the global scope, it is not available until after the `deviceready` event.
 
@@ -29,7 +32,7 @@ Although the object is in the global scope, it is not available until after the 
 
 ## Installation
 
-    cordova plugin add org.apache.cordova.device
+    cordova plugin add com.zooz.phonegap.plugin
 
 ## Properties
 
@@ -211,3 +214,4 @@ Get the operating system version.
     // Tizen: returns "TIZEN_20120425_2"
     var deviceVersion = device.version;
 
+-->
