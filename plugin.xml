@@ -31,7 +31,7 @@
         </config-file>
 
         <source-file src="src/android/ZooZCheckoutPlugin.java" target-dir="src/com/zooz/phonegap/plugin" />
-        <source-file src="src/android/zooz_iap_1.5.2.jar" target-dir="libs/" />
+        <!--<source-file src="src/android/zooz_iap_1.5.2.jar" target-dir="libs/" />-->
         
     </platform>
     

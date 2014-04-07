@@ -29,7 +29,9 @@ This plugin it is not available until after the `deviceready` event.
 
 2. Copy the zooz_iap_1.5.2.jar to yourproject/plugins/com.zooz.phonegap.plugin/src/android. If the file name has another name modify the plugin.xml with the new file name.
 
-3. Add plugin at your project.
+3. Uncomment the line <source-file src="src/android/zooz_iap_1.5.2.jar" target-dir="libs/" /> 
+
+4. Add plugin at your project.
 
 this plugin can be installed using the Phonegap CLI:
 
