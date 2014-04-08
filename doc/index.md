@@ -52,7 +52,7 @@ cordova plugin add https://github.com/davidgv88/zooz_phonegap_plugin.git
 Coming Soon!
 
 
-<!--
+<!---
 
 IOS Works:
 Project --> Build Settings
