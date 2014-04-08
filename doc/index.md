@@ -56,7 +56,7 @@ Coming Soon!
 
 ```sh
 IOS Works:
-Project --> Build Settings
+Project ----- Build Settings
 Objective-C Automatic reference counting NO
 
 New receive arguments
