@@ -31,21 +31,29 @@
         </config-file>
 
         <source-file src="src/android/ZooZCheckoutPlugin.java" target-dir="src/com/zooz/phonegap/plugin" />
-        <!--<source-file src="src/android/zooz_iap_1.5.2.jar" target-dir="libs/" />-->
+        <source-file src="src/android/zooz_iap_1.5.2.jar" target-dir="libs/" />
         
     </platform>
     
     <!-- ios -->
-    <!--
+   
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="Device">
-                <param name="ios-package" value="CDVDevice"/>
+            <feature name="ZooZCheckoutPlugin">
+                <param name="ios-package" value="ZooZCheckoutPlugin"/>
             </feature>
         </config-file>
 
-        <header-file src="src/ios/CDVDevice.h" />
-        <source-file src="src/ios/CDVDevice.m" />
+        <header-file src="src/ios/ZooZCheckoutPlugin.h" />
+        <source-file src="src/ios/ZooZCheckoutPlugin.m" />
+        
+        <framework src="src/ios/ZooZSDK.embeddedframework/ZooZSDK.framework" custom="true" />
+        
+        <framework src="libxml2.dylib" />
+        <framework src="libz.dylib" />
+        <framework src="Security.framework" weak="true" />
+        <framework src="QuartzCore.framework" weak="true" />
+        
     </platform>
-    -->
+   
 </plugin>

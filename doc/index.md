@@ -54,6 +54,12 @@ Coming Soon!
 
 <!--
 
+IOS Works:
+Project --> Build Settings
+Objective-C Automatic reference counting NO
+
+New receive arguments
+- (void)pay:(CDVInvokedUrlCommand*)command{
 
 ## Properties
 
