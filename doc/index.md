@@ -36,14 +36,14 @@ This plugin it is not available until after the `deviceready` event.
 this plugin can be installed using the Phonegap CLI:
 
 ```sh
-phonegap local plugin add https://github.com/davidgv88/zooz_phonegap_plugin.git
+phonegap local plugin add https://github.com/davidgv88/zooz_phonegap.git
 
 ```
 
 or the Cordova CLI:
 
 ```sh
-cordova plugin add https://github.com/davidgv88/zooz_phonegap_plugin.git
+cordova plugin add https://github.com/davidgv88/zooz_phonegap.git
 
 ```
 
