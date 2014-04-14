@@ -158,6 +158,7 @@ NSDictionary * activeResponse;
     
     if(activeResponse){
         //[activeResponse release];
+        activeResponse = nil;
     }
     
     activeResponse = responseDict;
@@ -177,14 +178,6 @@ NSDictionary * activeResponse;
 	NSLog(@"payment cancelled");
     //dialog closed without payment completed
 }
-
-
--(void)dealloc{
-    //[activeCallbackId release], activeCallbackId = nil;
-    //[activeResponse release], activeResponse = nil;
-    //[super dealloc];
-}
-
 
 
 @end
