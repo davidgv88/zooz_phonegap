@@ -157,11 +157,11 @@ NSDictionary * activeResponse;
                                           nil];
     
     if(activeResponse){
-        [activeResponse release];
+        //[activeResponse release];
     }
     
     activeResponse = responseDict;
-    [activeResponse retain];
+    //[activeResponse retain];
 }
 
 
@@ -180,9 +180,9 @@ NSDictionary * activeResponse;
 
 
 -(void)dealloc{
-    [activeCallbackId release], activeCallbackId = nil;
-    [activeResponse release], activeResponse = nil;
-    [super dealloc];
+    //[activeCallbackId release], activeCallbackId = nil;
+    //[activeResponse release], activeResponse = nil;
+    //[super dealloc];
 }
 
 
