@@ -47,7 +47,8 @@
         <header-file src="src/ios/ZooZCheckoutPlugin.h" />
         <source-file src="src/ios/ZooZCheckoutPlugin.m" />
         
-        <framework src="src/ios/ZooZSDK.embeddedframework/ZooZSDK.framework" custom="true" />
+        <!-- Add manually -->
+        <!--framework src="src/ios/ZooZSDK.embeddedframework/ZooZSDK.framework" custom="true" /-->
         
         <framework src="libxml2.dylib" />
         <framework src="libz.dylib" />
