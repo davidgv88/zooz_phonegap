@@ -17,5 +17,5 @@
 
 }
 
-- (void)pay:(NSMutableArray *)args withDict:(NSMutableDictionary *)options;
+- (void)pay:(CDVInvokedUrlCommand*)command;
 @end

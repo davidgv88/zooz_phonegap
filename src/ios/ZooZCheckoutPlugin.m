@@ -11,11 +11,13 @@
 @interface ZooZCheckoutPlugin ()
 
 @property(nonatomic, copy, readwrite) NSString *activeCallbackId;
+@property(nonatomic, copy, readwrite) NSString *commandCallbackId;
 
 @end
 
 @implementation ZooZCheckoutPlugin
 @synthesize activeCallbackId;
+@synthesize commandCallbackId;
 
 NSDictionary * activeResponse;
 
@@ -89,6 +91,8 @@ NSDictionary * activeResponse;
         
         NSLog(@"%@, %@", args, options);
         self.activeCallbackId = [args objectAtIndex:0];
+
+        self.commandCallbackId = command.callbackId;
         
         ZooZ * zooz = [ZooZ sharedInstance];
         zooz.sandbox = [[options valueForKey:@"isSandbox"] boolValue];
@@ -169,9 +173,16 @@ NSDictionary * activeResponse;
 -(void)paymentSuccessDialogClosed{
     NSLog(@"Payment dialog closed after success");
     //see paymentSuccessWithResponse: for the response transaction ID. 
-        
+     
+    /* DEFAULT
     [self success:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:activeResponse] callbackId:self.activeCallbackId];
     //    [self sendSuccessTo:self.activeCallbackId withObject:responseDict];
+
+    */
+
+    CDVPluginResult* pluginResult = nil;
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:activeResponse];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:self.commandCallbackId];
 }
 
 - (void)paymentCanceled{
